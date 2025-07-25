@@ -84,4 +84,46 @@ Once launched, you can:
 
 ## 🧠 Models & Libraries
 
-* **Embeddings**: \[Sen
+* **Embeddings**: [Sentence-Transformers](https://www.sbert.net/)
+* **Clustering**: scikit-learn, HDBSCAN
+* **Visualization**: NetworkX, Matplotlib
+* **Web UI**: Streamlit
+
+---
+
+## 📝 Example Output
+
+```
+Top 5 Similar Papers to "paper1.pdf":
+1. paper2.pdf (0.79 similarity)
+2. paper3.pdf (0.75)
+...
+
+Clusters:
+- Cluster 0: [paper1.pdf, paper3.pdf]
+- Cluster 1: [paper2.pdf, paper4.pdf]
+...
+```
+
+---
+
+## 🐞 Known Issues
+
+* KMeans on Windows with MKL might cause memory leak warnings. You can suppress this by setting:
+
+  ```bash
+  set OMP_NUM_THREADS=1
+  ```
+
+---
+
+## 📦 Dependencies
+
+See `requirements.txt` or use:
+
+```bash
+pip freeze > requirements.txt
+```
+
+---
+
